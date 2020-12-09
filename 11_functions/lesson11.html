@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <title>
+        Functions
+    </title>
+</head>
+<html>
+    <body>
+        <script>
+            let age = prompt('How old are you?', '');
+
+            function checkAge(age) {
+                if (age > 18) {
+                    return true;
+                };
+                return confirm('Do your parents passed you?');
+            };
+            // checkAge(age);
+
+            function checkAge_1(age) {
+                (age > 18) ? true : confirm('Do your parents passed you?');
+            };
+            // checkAge_1(age)
+
+            function checkAge_2(age) {
+                (age > 18) || confirm('Do your parents passed you?');
+            };
+            // checkAge_2(age);
+
+            ////////////////////////
+            function min(a,b) {
+                if (a > b) {
+                    return b;
+                } else if (a == b) {
+                    return 'Error: numbers are the same'
+                } else {
+                    return a;
+                };
+            };
+            // alert(min(4,3))
+
+            /////////////////////////
+            function pow(x,n) {
+                let result = x**n;
+                return result; 
+            }
+
+            // alert(pow(5,2))
+
+            ////////////////////////
+            let ask = (question, yes, no) => {
+                if (confirm(question)) yes()
+                else no()
+            };
+
+            // ask(
+            //     'Yes or no?',
+            //     () => alert('You sad YES'),
+            //     () => alert('You sad NO')
+            // );
+        </script>
+    </body>
+</html>

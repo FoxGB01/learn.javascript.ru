@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <title>
+        while and for
+    </title>
+</head>
+<html>
+    <body>
+        <script>
+            // let i = 3;
+            // while (i) {
+            //     alert(i--); // Какое последнее значение выведет этот код? /1 
+            // }
+
+            // ////////////////////
+            // //Оба цикла выводят alert с одинаковыми значениями или нет?
+            // let e = 0;
+            // while (++e < 5) alert(e); //от 1 до 4
+            // ////
+            // let u = 0;
+            // while (u++ < 5) alert(u); //от 1 до 5
+
+            // ////////////////////
+            // for (let q = 0; q < 5; q++) alert(q); //от 0 до 4 
+            // ////шаг вычисляется после действия и перед сравнением, поэтому разницы нет
+            // for (let w = 0; w < 5; ++w) alert(w); //от 0 до 4
+
+            ////////////////////
+            // for (let r = 2; r <=10; r++) {
+            //     if (r % 2 == 0) {
+            //         alert(r);
+            //     };
+            // }
+
+            // ////////////////////
+            // let h = 0;
+            // while (h < 3) {
+            //     alert(`number ${h++}!`);
+            // }
+
+            ////////////////////
+            // let n = 1;
+            // while (n) {
+            //     if (n < 100) {
+            //         n = prompt('Type number more 100: ', '');
+            //     } else {
+            //         alert('You are win');
+            //         break;
+            //     };
+            // };
+
+            /////////////////////
+            let end = prompt('Type end number:', '');
+
+            nextNum:
+            for (let number = 2; number <= end; number++) {
+
+                for (let d = number - 1; d > 1; d--) {
+                    if (number % d == 0) continue nextNum;
+                }
+
+                alert(number);
+            }
+           
+        </script>
+    </body>
+</html>
